@@ -9,10 +9,7 @@ const app = express();
 
 // Security middleware
 app.use(helmet());
-app.use(cors({
-    origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'file://', 'http://localhost:8080', 'http://127.0.0.1:8080'],
-    credentials: true
-}));
+app.use(cors());
 
 // Rate limiting
 const limiter = rateLimit({
